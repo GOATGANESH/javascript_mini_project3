@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Project 3</title>
+    <style>
+        body{
+            font-family: "Poppins";
+            font-size:1rem;
+            background-color: black;
+            color:white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            position:relative;
+            top:50px;
+            padding:30px;
+            /* border:2px solid white; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #clock{
+            width: max-content;
+            border:2px solid white;
+            padding:40px;
+            background-color: rgb(2, 85, 2);
+            border-radius: 10px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h3>--: Your Local Time :--</h3>
+        </div>
+        <div id="clock">20/12/2024</div>
+    </div>
+</body>
+<script>
+    
+    let clock=document.getElementById('clock')
+    setInterval(()=>{
+        let date=new Date()
+        clock.innerHTML=date.toLocaleTimeString()
+    },1000)
+</script>
+</html>
